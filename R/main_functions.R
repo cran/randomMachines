@@ -24,8 +24,8 @@ randomMachines <- function(formula,
    # Selecting a validation set
    if(is.null(validation)){
      train_index <- sample(1:nrow(train), round(0.75*nrow(train)))
-     validation <- train[train_index,,drop = FALSE]
-     train <- train[-train_index,,drop = FALSE]
+     validation <- train[-train_index,,drop = FALSE]
+     train <- train[train_index,,drop = FALSE]
    }
 
    # Checking the class of the training data
